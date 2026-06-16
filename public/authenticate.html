@@ -314,7 +314,7 @@
       setLoading(true);
 
       try {
-        const res = await fetch('/o/authenticate/sign-in', {
+        const res = await fetch('/authenticate/sign-in', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({

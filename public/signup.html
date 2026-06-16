@@ -283,7 +283,7 @@
     </form>
 
     <div class="footer">
-      Already have an account? <a href="/o/authenticate">Sign in</a>
+      Already have an account? <a href="/authenticate">Sign in</a>
     </div>
   </div>
 
@@ -357,7 +357,7 @@
       setLoading(true);
 
       try {
-        const res = await fetch('/o/authenticate/sign-up', {
+        const res = await fetch('/authenticate/sign-up', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
@@ -381,7 +381,7 @@
         } else {
           showSuccess('Account created! Redirecting…');
           setTimeout(() => {
-            window.location.href = `/o/authenticate${window.location.search}`;
+            window.location.href = `/authenticate${window.location.search}`;
           }, 1500);
         }
       } catch {
